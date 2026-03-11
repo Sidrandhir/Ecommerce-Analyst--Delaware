@@ -1,0 +1,25 @@
+version: "3.9"
+
+services:
+  analyst:
+    build: .
+    image: ecommerce-analyst
+    container_name: ecommerce-analyst
+    stdin_open: true
+    tty: true
+    environment:
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - GEMINI_MODEL=${GEMINI_MODEL:-gemini-1.5-flash}
+      - CACHE_ENABLED=${CACHE_ENABLED:-true}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+    volumes:
+      # Mount dataset from host
+      - ./data:/app/data:ro
+      # Persist vectorstore and cache across runs
+      - chroma_data:/app/chroma_db
+      - cache_data:/app/cache
+    command: python main.py
+
+volumes:
+  chroma_data:
+  cache_data:

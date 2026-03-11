@@ -1,0 +1,29 @@
+# Environment
+.env
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Data (large files)
+data/*.xlsx
+data/*.csv
+
+# Generated
+chroma_db/
+cache/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
