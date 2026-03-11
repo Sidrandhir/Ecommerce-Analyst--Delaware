@@ -27,7 +27,7 @@ console = Console()
 BANNER = """
 ╔══════════════════════════════════════════════════════════╗
 ║         🛒  E-Commerce AI Analyst                        ║
-║         Powered by Gemini 1.5 Flash + LangChain          ║
+║         Powered by Gemini 2.0 Flash + LangChain          ║
 ║         Dataset: Online Retail II (UCI)                  ║
 ╚══════════════════════════════════════════════════════════╝
 Type your business question, or:
